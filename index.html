@@ -7,15 +7,15 @@
 
 	<h3>Enter Text To Translate:</h3> 
 
-	<textarea>Placeholder</textarea>
+	<textarea id="inputText">Placeholder</textarea>
 
 	<h3>Select a Language:</h3>
 
-	<select>
-		<option id="danish" value="Danish">Danish</option>
-		<option id="esperanto" value="Esperanto">Esperanto</option>
-	  	<option id="german" value="German">German</option>
-	  	<option id="polish" value="Polish">Polish</option>
+	<select id="languageChooser">
+		<option id="danish" value="danishTranslate">Danish</option>
+		<option id="esperanto" value="esperantoTranslate">Esperanto</option>
+	  	<option id="german" value="germanTranslate">German</option>
+	  	<option id="polish" value="polishTranslate">Polish</option>
 	</select>
 
 	<input type="button" label="translate" value="Translate" id="translate_button">
@@ -24,8 +24,8 @@
 	<div id="translated_text"></div>
 
 
-	<script type="text/javascript" src="javascript/DOMHandler.js"></script>
 	<script type="text/javascript" src="javascript/main.js"></script>
-
+	<script type="text/javascript" src="javascript/polish.js"></script>
+	<script type="text/javascript" src="javascript/DOMHandler.js"></script>
 </body>
 </html>

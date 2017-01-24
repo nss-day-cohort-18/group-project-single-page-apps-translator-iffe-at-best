@@ -1,8 +1,8 @@
-"use strict"
+"use strict";
 
 // empty iife...
 
-var translateText = (function () {
+var TranslateText = (function () {
 
 	  var privateMethod = function () {};
 	  
@@ -19,3 +19,5 @@ var translateText = (function () {
 	  };
 
 })();
+
+console.log(TranslateText);

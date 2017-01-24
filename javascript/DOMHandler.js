@@ -1,21 +1,28 @@
-// Variable to hold the final price. Default to 0.
-var finalSandwichPrice = 0;
+// Variable that grabs the textarea element with the ID inputText
+var inputText = document.getElementById("inputText").value;
 
-// Variable to hold topping that the user selects
-var selectedTopping;
+// Variable to hold output text, default to input text
+var finalOutputText = inputText;
+
+// Variable to hold language that the user selects
+var selectedLanguage;
 
 // Get a reference to the <select> element that has all the meat options
-var meatChooser = document.getElementById("meat-chooser");
+var languageChooser = document.getElementById("languageChooser");
 
 /* 
   A <select> element broadcasts a change event, so you listen for it
-  and get the value of the topping from your augmented IIFE
+  and get the value of the language from your augmented IIFE
 */
-meatChooser.addEventListener("change", function(event) {
+languageChooser.addEventListener("change", function(event) {
   // Get the value chosen from the DOM
-  selectedTopping = event.target.value;
+  selectedLanguage = event.target.value;
 
-  // Determine the price of the topping chosen
-
+  // Translate the text of the language choosen
+  console.log(TranslateText);
   // Add the topping to the SandwichMaker to increase the total price
 });
+
+
+
+
