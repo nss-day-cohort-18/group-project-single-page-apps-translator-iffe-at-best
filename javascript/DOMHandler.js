@@ -19,7 +19,7 @@ languageChooser.addEventListener("change", function(event) {
   selectedLanguage = event.target.value;
 
   // Translate the text of the language choosen
-
+  console.log(TranslateText);
   // Add the topping to the SandwichMaker to increase the total price
 });
 
