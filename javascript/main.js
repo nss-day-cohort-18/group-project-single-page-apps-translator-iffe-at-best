@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 // empty iife...
 
@@ -19,3 +19,5 @@ var TranslateText = (function () {
 	  };
 
 })();
+
+console.log(TranslateText);
