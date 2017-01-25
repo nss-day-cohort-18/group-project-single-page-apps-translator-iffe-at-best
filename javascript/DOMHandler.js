@@ -1,8 +1,8 @@
 // Variable that grabs the textarea element with the ID inputText
-var inputText = document.getElementById("inputText").value;
-console.log('inputText', inputText);
+var inputText = document.getElementById("inputText");
+//console.log('inputText', inputText);
 // Variable to hold output text, default to input text
-var finalOutputText = inputText;
+var finalOutputText;
 
 // Variable to hold language that the user selects
 var selectedLanguage;
@@ -16,7 +16,8 @@ var languageChooser = document.getElementById("languageChooser");
 */
 languageChooser.addEventListener("change", function(event) {
   // Get the value chosen from the DOM
-  selectedLanguage = event.target.value;
+  selectedLanguage = event.target; 
+  
 });
 
 // Translate the text of the language choosen
@@ -24,19 +25,34 @@ var translateButton = document.getElementById("translate_button");
 translateButton.addEventListener("click", displayTranslation);
 
 function displayTranslation() {
-    console.log(inputText);
+    // console.log(inputText);
+
+    var inputTextToArray = inputText.value.split(" ");
+    var finishedTranslation = "";
+
     var outputDOM = document.getElementById("translated_text");
-    if (selectedLanguage === "German"){
-        finalOutputText = TranslateText.translateToGerman(inputText.value);
-    } else if (selectedLanguage === "Polish"){
-        finalOutputText = TranslateText.translateToPolish(inputText.value);
-    } else if (selectedLanguage === "Esperanto"){
-        finalOutputText = TranslateText.translateToEsperanto(inputText.value);
-    } else if (selectedLanguage === "Danish"){
-        finalOutputText = TranslateText.translateToDanish(inputText.value);
-    
-    };
-    outputDOM.innerHTML = finalOutputText;
+
+    for (var i = 0; i < inputTextToArray.length; i++) {
+
+          finalOutputText = "";
+         if (selectedLanguage.value === "danishTranslate"){
+              finalOutputText = Translate.translateToDanish(inputTextToArray[i]);
+              finalOutputText += " ";
+         } else if (selectedLanguage.value === "polishTranslate"){
+              finalOutputText = Translate.translateToPolish(inputTextToArray[i]);
+              finalOutputText += " ";
+          } else if (selectedLanguage.value === "esperantoTranslate"){
+              finalOutputText = Translate.translateToEsperanto(inputTextToArray[i]);
+              finalOutputText += " ";
+          } else if (selectedLanguage.value === "germanTranslate"){
+              finalOutputText = Translate.translateToGerman(inputTextToArray[i]);
+              finalOutputText += " ";
+         }
+
+         finishedTranslation += finalOutputText;
+    }
+
+   outputDOM.innerHTML = finishedTranslation;
 }
 
 

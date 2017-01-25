@@ -1,19 +1,16 @@
-"use strict";
-
-var TranslateText = (function (TranslateText) {
+var Translate = (function (originalTranslate) {
   var esperantoTranslate = {
-    "merry": "gaja",
-    "christmas": "christmas",
-    "and": "kaj",
-    "happy": "feliĉa",
-    "new": "novaj",
-    "year": "jaro"
+    merry: "gaja",
+    christmas: "christmas",
+    and: "kaj",
+    happy: "feliĉa",
+    new: "novaj",
+    year: "jaro"
   };
-  TranslateText.translateToEsperanto = function(word) {
 
-    return esperantoTranslate[word];
-  };
-  return TranslateText;
-})(TranslateText);
+      originalTranslate.translateToEsperanto = function(esperantoWord) {
+        return esperantoTranslate[esperantoWord];
+    }
+    return originalTranslate;
 
-console.log(TranslateText);
+})(Translate);
