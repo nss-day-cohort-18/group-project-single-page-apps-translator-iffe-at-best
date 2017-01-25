@@ -1,24 +1,19 @@
-"use strict";
-
-var TranslateText = (function (TranslateText){
+var Translate = (function () {
 	var danishTranslate = {
-	    "merry": "lystig",
-		"christmas": "jul",
-		"and": "og",
-		"happy": "lykkelig",
-		"new": "ny",
-		"year": "år"
+	    merry: "lystig",
+		christmas: "jul",
+		and: "og",
+		happy: "lykkelig",
+		new: "ny",
+		year: "år"
 	};
 
 	return {
-		getDanishTranslation: function(danishWord){
-			return danishTranslate[danishWord]
+		translateToDanish: function(danishWord) {
+			return danishTranslate[danishWord];
 		}
-	  
 	};
-	  return TranslateText;
-})(TranslateText);
-console.log(TranslateText);
+})();
 
 
 

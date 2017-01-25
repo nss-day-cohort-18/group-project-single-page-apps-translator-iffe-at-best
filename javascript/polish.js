@@ -1,23 +1,15 @@
-"use strict";
-
-// empty iife...
-
-var TranslateText = (function (TranslateText) {
-
+var Translate = (function (originalTranslate) {
     var polishTranslate = {
-	  	"merry":"wesołych", 
-	  	"christmas":"świąt",
-	  	"and":"i", 
-	  	"happy":"szczęśliwego", 
-	  	"new":"nowego",
-	  	"year":"roku"
+	  	merry: "wesołych", 
+	  	christmas :"świąt",
+	  	and: "i", 
+	  	happy: "szczęśliwego", 
+	  	new: "nowego",
+	  	year: "roku"
     };
 
- 	return {
-      getPolishTranslation: function(polishWord) {
-        return polishTranslate[polishWord]
-      }
+      	originalTranslate.translateToPolish = function(polishWord) {
+      		return polishTranslate[polishWord];
     };
-    return TranslateText;
-})(TranslateText);
-console.log(TranslateText);
+    return originalTranslate;
+})(Translate);
