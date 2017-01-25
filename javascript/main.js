@@ -5,19 +5,7 @@
 var TranslateText = (function () {
 
 	  var privateMethod = function () {};
-	  
-	  return {
-	    publicMethodOne: function () {
-	      // I can call `privateMethod()` you know...
-	    },
-	    publicMethodTwo: function () {
-
-	    },
-	    publicMethodThree: function () {
-
-	    }
-	  };
 
 })();
 
-console.log(TranslateText);
+// console.log(TranslateText);

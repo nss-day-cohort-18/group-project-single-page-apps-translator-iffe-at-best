@@ -1,21 +1,19 @@
 "use strict";
 
-// empty iife...
+var TranslateText = (function (TranslateText) {
+  var esperantoTranslate = {
+    "merry": "gaja",
+    "christmas": "christmas",
+    "and": "kaj",
+    "happy": "feliĉa",
+    "new": "novaj",
+    "year": "jaro"
+  };
+  TranslateText.translateToEsperanto = function(word) {
 
-var translateText = (function () {
+    return esperantoTranslate[word];
+  };
+  return TranslateText;
+})(TranslateText);
 
-      var privateMethod = function () {};
-
-      return {
-        publicMethodOne: function () {
-          // I can call `privateMethod()` you know...
-        },
-        publicMethodTwo: function () {
-
-        },
-        publicMethodThree: function () {
-
-        }
-      };
-
-})();
+console.log(TranslateText);
