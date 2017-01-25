@@ -1,32 +1,23 @@
-//"use strict";
-// empty iife...
-// Variable that grabs the textarea element with the ID inputText
-var inputText = document.getElementById("inputText").value;
+"use strict";
 
+// empty iife...
 
 var TranslateText = (function (TranslateText) {
 
-	  var polishTranslate = {
-	  	// translate goes here
-	  	"merry":"god", 
-	  	"christmas":"jul",
-	  	"and":"och", 
-	  	"happy":"gott", 
-	  	"new":"nytt",
-	  	"year":"år"
-	  };
-	  
-	 return {
-	    translateToPolish: function () {
-	      // I can call `privateMethod()` you know...
-	     for (word in polishTranslate) {
-	     	inputText = polishTranslate;
-	     	console.log(inputText);
-	      };
-	      console.log("hi");
+    var polishTranslate = {
+	  	"merry":"wesołych", 
+	  	"christmas":"świąt",
+	  	"and":"i", 
+	  	"happy":"szczęśliwego", 
+	  	"new":"nowego",
+	  	"year":"roku"
+    };
 
-	    }
-
-	  };
-	  return TranslateText;
+ 	return {
+      getPolishTranslation: function(polishWord) {
+        return polishTranslate[polishWord]
+      }
+    };
+    return TranslateText;
 })(TranslateText);
+console.log(TranslateText);
