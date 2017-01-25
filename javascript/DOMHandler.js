@@ -21,19 +21,22 @@ languageChooser.addEventListener("change", function(event) {
 
 // Translate the text of the language choosen
 var translateButton = document.getElementById("translate_button");
-translateButton.addEventListener('click', displayTranslation);
+translateButton.addEventListener("click", displayTranslation);
 
 function displayTranslation() {
     console.log(inputText);
     var outputDOM = document.getElementById("translated_text");
-    if (selectedLanguage === esperantoTranslate) {
+    if (selectedLanguage === "German"){
+        finalOutputText = TranslateText.translateToGerman(inputText.value);
+    } else if (selectedLanguage === "Polish"){
+        finalOutputText = TranslateText.translateToPolish(inputText.value);
+    } else if (selectedLanguage === "Esperanto"){
         finalOutputText = TranslateText.translateToEsperanto(inputText.value);
+    } else if (selectedLanguage === "Danish"){
+        finalOutputText = TranslateText.translateToDanish(inputText.value);
+    
     };
     outputDOM.innerHTML = finalOutputText;
-};
-
-
-
-
+}
 
 
