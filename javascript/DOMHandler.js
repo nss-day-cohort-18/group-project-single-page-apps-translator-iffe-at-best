@@ -45,9 +45,9 @@ function displayTranslation() {
               finalOutputText = Translate.translateToEsperanto(inputTextToArray[i]);
               finalOutputText += " ";
           } else if (selectedLanguage.value === "germanTranslate"){
-              finalOutputText = Translate.translateToGerman(inputText[i]);
+              finalOutputText = Translate.translateToGerman(inputTextToArray[i]);
               finalOutputText += " ";
-          };
+         }
 
          finishedTranslation += finalOutputText;
     }
