@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 // Variable to hold the final price. Default to 0.
 var finalSandwichPrice = 0;
 
@@ -14,6 +15,40 @@ var meatChooser = document.getElementById("meat-chooser");
 meatChooser.addEventListener("change", function(event) {
   // Get the value chosen from the DOM
   selectedTopping = event.target.value;
+=======
+var inputText = document.getElementById("inputText");
+//no .value here because that only temp stores userinput
+var finalOutputText = document.getElementById("translated_text");
+
+var selectedLanguage;
+
+var translateButton = document.getElementById("translate_button");
+
+var languageChooser = document.getElementById("languageChooser");
+
+
+languageChooser.addEventListener("change", function(event) {
+	selectedLanguage = event.target.value
+	//de we want "change" to trigger translatetext.translatetoXLanguage?
+});
+
+translateButton.addEventListener("click", function(event) {
+	if (selectedLanguage === "germanTranslate"){
+		finalOutputText.innerHTML = TranslateText.translateToGerman(inputText.value);
+	} else if (selectedLanguage === "polishTranslate"){
+		finalOutputText.innerHTML = TranslateText.translateToPolish(inputText.value);
+	} else if (selectedLanguage === "esperantoTranslate"){
+		finalOutputText.innerHTML = TranslateText.translateToEsperanto(inputText.value);
+	} else if (selectedLanguage === "danishTranslate"){
+		finalOutputText.innerHTML = TranslateText.translateToDanish(inputText.value);
+	}
+});
+
+  
+
+
+
+>>>>>>> Stashed changes
 
   // Determine the price of the topping chosen
 

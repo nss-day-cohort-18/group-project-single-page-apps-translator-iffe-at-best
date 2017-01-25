@@ -2,6 +2,7 @@
 
 // empty iife...
 
+<<<<<<< Updated upstream
 var translateText = (function () {
 
 	  var privateMethod = function () {};
@@ -19,3 +20,6 @@ var translateText = (function () {
 	  };
 
 })();
+=======
+var TranslateText = {}; 
+>>>>>>> Stashed changes
