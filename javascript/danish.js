@@ -24,10 +24,7 @@ console.log(TranslateText);
 
 
 
-TranslateText.getDanishTranslation = function (){
-	for (var i = 0; i < danish.length; i++) {
- 
-  }
+
 
 
 
